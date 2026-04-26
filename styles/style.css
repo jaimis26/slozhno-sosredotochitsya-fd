@@ -267,6 +267,10 @@ h4 {
     grid-column: 2;
   }
 
+  .what__container {
+    padding-top: 60px;
+  }
+
   .section-why {
     grid-column: 2;
     align-self: baseline;
@@ -279,6 +283,7 @@ h4 {
   .how__container {
     display: grid;
     grid-template-columns: 35% 65%;
+    padding-top: 60px;
   }
 
   .title-decor__not-bold {
@@ -361,7 +366,7 @@ h4 {
   .why__container,
   .what__container,
   .how__container {
-    padding-top: 60px;
+    padding-top: 50px;
   }
 
   .header__theme-menu-list {
@@ -377,6 +382,10 @@ h4 {
 
   .decorative-text::before {
     margin-top: 7px;
+  }
+
+  .title-decor__not-bold {
+    margin-top: 10px;
   }
 
   .header__title {
@@ -413,7 +422,7 @@ h4 {
   }
 
   .images-container {
-    padding-top: 60px;
+    padding-top: 40px;
   }
 
   .food {
