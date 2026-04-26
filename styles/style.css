@@ -186,14 +186,30 @@ h4 {
   margin-bottom: 20px;
 }
 
+.section-why {
+  margin-top: 5px;
+}
+
+.food {
+  margin-top: 10px;
+}
+
+.gadgets {
+  margin-top: 10px;
+}
+
 .how-section {
   padding-bottom: 0;
+}
+
+.how__container {
+  padding-top: 50px;
 }
 
 .images-container {
   display: grid;
   gap: 10px;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 .images {
@@ -263,6 +279,10 @@ h4 {
     grid-column: 2;
   }
 
+  .what__container {
+    padding-top: 80px;
+  }
+
   .section-why {
     grid-column: 2;
     align-self: baseline;
@@ -275,6 +295,11 @@ h4 {
   .how__container {
     display: grid;
     grid-template-columns: 35% 65%;
+    padding-top: 80px;
+  }
+
+  .images-container {
+    padding-top: 80px;
   }
 
   .title-decor__not-bold {
@@ -350,6 +375,10 @@ h4 {
 }
 
 @media (min-width: 1024px) {
+  .header {
+    display: grid;
+  }
+
   .decorative-corner::before {
     left: 973px;
     margin-top: 7px;
@@ -358,13 +387,14 @@ h4 {
   .why__container,
   .what__container,
   .how__container {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 
   .header__theme-menu-list {
     display: flex;
     justify-self: center;
     padding-top: 20px;
+    gap: 23px;
   }
 
   .decorative-text {
@@ -382,6 +412,7 @@ h4 {
 
   .in-header {
     max-width: 491px;
+    margin-bottom: -40px;
   }
 
   .decorative-corner::after {
@@ -425,5 +456,9 @@ h4 {
 
   .ice-cream-image {
     min-height: 600px;
+  }
+
+  .footer {
+    margin-top: 60px;
   }
 }
