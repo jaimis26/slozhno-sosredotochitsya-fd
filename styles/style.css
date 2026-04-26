@@ -1,9 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 body {
   background-color: #000028;
-  font-family: 'IBM Plex Mono', sans-serif;
+  font-family: "IBM Plex Mono", sans-serif;
 }
-
 
 .page {
   background-image: var(--background-image);
@@ -25,22 +24,22 @@ body {
   position: absolute;
   top: 10px;
   right: 38px;
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 25px;
-  color: #FF0070;
+  color: #ff0070;
   display: var(--display);
 }
 
 .decorative-text::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #FF0070;
-  box-shadow: 0px 0px 4px 2px #FF0070;
+  background: #ff0070;
+  box-shadow: 0px 0px 4px 2px #ff0070;
   top: 10px;
   left: 43px;
   display: var(--display);
@@ -52,7 +51,7 @@ body {
 
 .decorative-corner::before,
 .decorative-corner::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -61,7 +60,6 @@ body {
 }
 
 .decorative-corner::before {
-  top: 0;
   right: 0;
   border-width: 1px;
   border-left: 0px;
@@ -100,21 +98,21 @@ body {
 button {
   background-color: transparent;
   border: none;
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 18px;
-  color: #FF0070;
+  color: #ff0070;
   text-transform: lowercase;
 }
 
 button:focus-visible {
-outline: none;
-border-bottom: 1px solid var(--border-focus-color);
+  outline: none;
+  border-bottom: 1px solid var(--border-focus-color);
 }
 
 .header__title {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -134,12 +132,16 @@ border-bottom: 1px solid var(--border-focus-color);
   align-self: baseline;
 }
 
-.why__container, .what__container, .how__container {
+.why__container,
+.what__container,
+.how__container {
   display: grid;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 23px;
@@ -180,9 +182,18 @@ h2, h3, h4 {
   margin-top: 20px;
 }
 
+.section-how {
+  margin-bottom: 20px;
+}
+
+.how-section {
+  padding-bottom: 0;
+}
+
 .images-container {
   display: grid;
   gap: 10px;
+  padding-top: 50px;
 }
 
 .images {
@@ -195,10 +206,11 @@ h2, h3, h4 {
   height: 100vh;
   min-height: 668px;
   display: grid;
+  padding-top: 50px;
 }
 
 .footer-title {
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
@@ -207,203 +219,211 @@ h2, h3, h4 {
 }
 
 @media (min-width: 768px) {
- 
- .page {
-  padding-left: 20px;
-  padding-right: 20px;
- }
+  .page {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   .header {
     display: grid;
   }
-  
-.decorative-corner::before {
-  left: 717px;
-}
 
-.decorative-text {
-  right: 50px;
-}
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 
-.decorative-corner::after {
-  top: 979px;
-}
+  .decorative-corner::before {
+    left: 717px;
+  }
 
-.header__theme-menu-list {
-  padding-top: 192px;
-}
+  .decorative-text {
+    right: 50px;
+  }
 
-.in-header {
-  max-width: 364px;
-  justify-self: end;
-}
+  .decorative-corner::after {
+    top: 979px;
+  }
 
-.why__container {
-  display: grid;
-  grid-template-columns: 35% 65%;
-}
+  .header__theme-menu-list {
+    padding-top: 192px;
+  }
 
-.why-section {
-  grid-column: 2;
-}
+  .in-header {
+    max-width: 364px;
+    justify-self: end;
+  }
 
-.section-why {
-  grid-column: 2;
-  align-self: baseline;
-}
+  .why__container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding-top: 60px;
+  }
 
-h3 {
-  max-width: 236px;
-}
+  .why-section {
+    grid-column: 2;
+  }
 
-.how__container {
-  display: grid;
-  grid-template-columns: 35% 65%;
-}
+  .section-why {
+    grid-column: 2;
+    align-self: baseline;
+  }
 
-.title-decor__not-bold {
-  grid-column: 2;
-  display: grid;
-  margin: 0;
-}
+  h3 {
+    max-width: 236px;
+  }
 
-.how-section {
-  grid-column: 2;
-}
+  .how__container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
 
-.section-how {
-  align-self: baseline;
-  margin-bottom: 20px;
-}
+  .title-decor__not-bold {
+    grid-column: 2;
+    display: grid;
+  }
 
-.section-image {
-  margin-top: 80px;
-}
+  .how-section {
+    grid-column: 2;
+  }
 
-.images-section {
-  display: grid;
-  gap: 20px;
-}
+  .section-how {
+    align-self: baseline;
+    margin-bottom: 20px;
+  }
 
-.sunset {
-  grid-column: span 2 / span 2;
-}
+  .section-image {
+    margin-top: 80px;
+  }
 
-.ice-cream {
-  grid-row: span 2 / span 2;
-  grid-column-start: 3;
-  grid-row-start: 1;
-}
+  .images-section {
+    display: grid;
+    gap: 20px;
+  }
 
-.ice-cream-image {
-  object-fit: cover;
-  max-width: 100%;
-  height: 442px;
-}
+  .sunset {
+    grid-column: span 2 / span 2;
+  }
 
-.tape {
-  grid-row: span 2 / span 2;
-  grid-column-start: 1;
-  grid-row-start: 2;
-}
+  .ice-cream {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
 
-.tape-image {
-  height: 573px;
-  object-fit: cover;
-  max-width: 100%;
-}
+  .ice-cream-image {
+    object-fit: cover;
+    max-width: 100%;
+    height: 442px;
+  }
 
-.books {
-  grid-column-start: 2;
-  grid-row-start: 2;
-}
+  .tape {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
 
-.street {
-  grid-column: span 2 / span 2;
-  grid-column-start: 2;
-  grid-row-start: 3;
-}
+  .tape-image {
+    height: 573px;
+    object-fit: cover;
+    max-width: 100%;
+  }
 
-.footer-title {
-  justify-self: center;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
-}
+  .books {
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
 
-.footer {
-  margin-top: 60px;
-}
+  .street {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
 
+  .footer-title {
+    justify-self: center;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .footer {
+    margin-top: 80px;
+  }
 }
 
 @media (min-width: 1024px) {
   .decorative-corner::before {
-  left: 973px;
-  margin-top: 7px;
-}
+    left: 973px;
+    margin-top: 7px;
+  }
 
-.header__theme-menu-list {
-  display: flex;
-  justify-self: center;
-  padding-top: 20px;
-}
+  .why__container,
+  .what__container,
+  .how__container {
+    padding-top: 80px;
+  }
 
-.decorative-text {
-  padding-top: 7px;
-}
+  .header__theme-menu-list {
+    display: flex;
+    justify-self: center;
+    padding-top: 20px;
+  }
 
-.decorative-text::before {
-  margin-top: 7px;
-}
+  .decorative-text {
+    padding-top: 7px;
+  }
 
-.header__title {
-  align-self: center;
-}
+  .decorative-text::before {
+    margin-top: 7px;
+  }
 
-.in-header {
-  max-width: 491px;
-}
+  .header__title {
+    align-self: center;
+    font-size: (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 
-.decorative-corner::after {
-  top: 723px;
-}
+  .in-header {
+    max-width: 491px;
+  }
 
-.what__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-}
+  .decorative-corner::after {
+    top: 723px;
+  }
 
-h3 {
-  max-width: 315px;
-}
+  .what__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
 
-.concentration {
-  align-self: baseline;
-  grid-column: 1;
-}
+  h3 {
+    max-width: 315px;
+  }
 
-.concentration-text {
-  grid-column: 1;
-}
+  .concentration {
+    align-self: baseline;
+    grid-column: 1;
+  }
 
-.food {
-  grid-column: 2;
-  align-self: baseline;
-  grid-row: 2;
-}
+  .concentration-text {
+    grid-column: 1;
+  }
 
-.gadgets {
-  align-self: baseline;
-  grid-column: 3;
-  grid-row: 2;
-}
+  .food {
+    grid-column: 2;
+    align-self: baseline;
+    grid-row: 2;
+  }
 
-.tape-image {
-  min-height: 772px;
-}
+  .gadgets {
+    align-self: baseline;
+    grid-column: 3;
+    grid-row: 2;
+  }
 
-.ice-cream-image {
-  min-height: 600px;
-}
+  .tape-image {
+    min-height: 772px;
+  }
 
+  .ice-cream-image {
+    min-height: 600px;
+  }
 }
