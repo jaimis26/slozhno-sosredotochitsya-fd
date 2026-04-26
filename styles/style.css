@@ -2,6 +2,8 @@
 body {
   background-color: #000028;
   font-family: "IBM Plex Mono", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .page {
@@ -9,8 +11,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding-left: 10px;
-  padding-right: 10px;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
@@ -190,26 +190,13 @@ h4 {
   margin-top: 5px;
 }
 
-.food {
-  margin-top: 10px;
-}
-
-.gadgets {
-  margin-top: 10px;
-}
-
 .how-section {
   padding-bottom: 0;
-}
-
-.how__container {
-  padding-top: 50px;
 }
 
 .images-container {
   display: grid;
   gap: 10px;
-  padding-top: 70px;
 }
 
 .images {
@@ -279,10 +266,6 @@ h4 {
     grid-column: 2;
   }
 
-  .what__container {
-    padding-top: 80px;
-  }
-
   .section-why {
     grid-column: 2;
     align-self: baseline;
@@ -295,11 +278,6 @@ h4 {
   .how__container {
     display: grid;
     grid-template-columns: 35% 65%;
-    padding-top: 80px;
-  }
-
-  .images-container {
-    padding-top: 80px;
   }
 
   .title-decor__not-bold {
@@ -368,11 +346,6 @@ h4 {
     justify-self: center;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-
-  .footer {
-    margin-top: 80px;
-  }
-}
 
 @media (min-width: 1024px) {
   .header {
