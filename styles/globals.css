@@ -10,6 +10,8 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 h1,

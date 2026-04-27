@@ -2,8 +2,6 @@
 body {
   background-color: #000028;
   font-family: "IBM Plex Mono", sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .page {
@@ -132,11 +130,23 @@ button:focus-visible {
   align-self: baseline;
 }
 
-.why__container,
-.what__container,
-.how__container {
+.why__container {
   display: grid;
   padding-top: 50px;
+}
+
+.what__container {
+  display: grid;
+  padding-top: 35px;
+}
+
+.food-text {
+  margin-top: 10px;
+}
+
+.how__container {
+  display: grid;
+  padding-top: 40px;
 }
 
 h2,
@@ -179,7 +189,7 @@ h4 {
   line-height: 23px;
   color: #000028;
   background-color: var(--bg-color);
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .section-how {
@@ -220,6 +230,7 @@ h4 {
   line-height: 83%;
   color: var(--footer-color);
   text-shadow: 4px 4px 0 var(--accent-color);
+  padding-top: 50px;
 }
 
 @media (min-width: 768px) {
@@ -245,7 +256,7 @@ h4 {
   }
 
   .decorative-corner::after {
-    top: 979px;
+    top: 970px;
   }
 
   .header__theme-menu-list {
@@ -300,6 +311,10 @@ h4 {
     margin-bottom: 20px;
   }
 
+  .images-container {
+    padding-top: 0;
+  }
+
   .section-image {
     margin-top: 80px;
   }
@@ -351,6 +366,7 @@ h4 {
   .footer-title {
     justify-self: center;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding-top: 35px;
   }
 
 @media (min-width: 1024px) {
@@ -361,12 +377,6 @@ h4 {
   .decorative-corner::before {
     left: 973px;
     margin-top: 7px;
-  }
-
-  .why__container,
-  .what__container,
-  .how__container {
-    padding-top: 50px;
   }
 
   .header__theme-menu-list {
@@ -385,12 +395,13 @@ h4 {
   }
 
   .title-decor__not-bold {
-    margin-top: 10px;
+    margin-top: 23px;
   }
 
   .header__title {
     align-self: center;
     font-size: (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-bottom: 25px;
   }
 
   .in-header {
@@ -402,10 +413,19 @@ h4 {
     top: 723px;
   }
 
+  .why__container {
+    padding-top: 50px;
+  }
+
   .what__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+    padding-top: 60px;
+  }
+
+  .how__container {
+    padding-top: 70px;
   }
 
   h3 {
@@ -419,10 +439,6 @@ h4 {
 
   .concentration-text {
     grid-column: 1;
-  }
-
-  .images-container {
-    padding-top: 40px;
   }
 
   .food {
