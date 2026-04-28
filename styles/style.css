@@ -213,6 +213,11 @@ h4 {
   padding-top: 50px;
 }
 
+  .images-section {
+    display: grid;
+    gap: 5px;
+  }
+
 .images {
   max-width: 100%;
   height: auto;
@@ -223,7 +228,7 @@ h4 {
   height: 100vh;
   min-height: 668px;
   display: grid;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .footer-title {
@@ -233,7 +238,7 @@ h4 {
   line-height: 83%;
   color: var(--footer-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 @media (min-width: 768px) {
@@ -374,6 +379,7 @@ h4 {
   .footer {
     height: 100vh;
     min-height: 1024px;
+    padding-top: 50px;
   }
 
   .footer-title {
@@ -473,9 +479,12 @@ h4 {
 
   .footer {
     min-height: 768px;
+    height: 100vh;
+    box-sizing: content-box;
   }
 
   .footer-title {
-    margin-top: 20px;
+    padding-top: 10px;
   }
+
 }
