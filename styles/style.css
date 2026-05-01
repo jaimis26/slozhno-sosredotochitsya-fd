@@ -1,6 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 body {
-  background-color: #000028;
+  background-color: var(--background-body-color);
   font-family: "IBM Plex Mono", sans-serif;
   margin: 0;
   padding: 0;
@@ -25,13 +25,14 @@ body {
 .decorative-text {
   position: absolute;
   top: 10px;
-  right: 38px;
+  right: 29px;
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 25px;
   color: #ff0070;
   display: var(--display);
+  justify-self: end;
 }
 
 .decorative-text::before {
@@ -47,12 +48,12 @@ body {
   display: var(--display);
 }
 
-.decorative-corner {
+.decorated-zone {
   position: relative;
 }
 
-.decorative-corner::before,
-.decorative-corner::after {
+.decorated-zone::before,
+.decorated-zone::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -61,7 +62,7 @@ body {
   border-style: solid;
 }
 
-.decorative-corner::before {
+.decorated-zone::before {
   right: 0;
   border-width: 1px;
   border-left: 0px;
@@ -70,10 +71,9 @@ body {
   top: 10px;
 }
 
-.decorative-corner::after {
-  bottom: 0;
+.decorated-zone::after {
+  bottom: 10px;
   left: 0;
-  top: 633px;
   border-width: 1px;
   border-top: 0px;
   border-right: 0px;
@@ -90,11 +90,15 @@ body {
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
   text-transform: lowercase;
+  justify-items: center;
 }
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--button-active-color);
   pointer-events: none;
+  padding: 0px 13px;
+  width: 70px;
+  height: 26px;
 }
 
 .header__theme-menu-item:hover {
@@ -104,7 +108,7 @@ body {
 button {
   background-color: transparent;
   border: none;
-  color: #ff0070;
+  color: var(--button-text-color);
   text-transform: lowercase;
 }
 
@@ -120,6 +124,7 @@ button:focus-visible {
   line-height: 83%;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
+  padding-top: 10px;
 }
 
 .title-decor {
@@ -127,46 +132,39 @@ button:focus-visible {
   background-color: var(--bg-color);
   font-weight: 700;
   font-size: 1.125rem;
-  line-height: 23px;
+  line-height: 23.4px;
 }
 
 .in-header {
   align-self: baseline;
+  margin-bottom: 10px;
 }
 
-.why__container {
+.content-section {
   display: grid;
+  padding-top: 50px;
+}
+
+.why-container {
   padding-top: 40px;
 }
 
-.what__container {
-  display: grid;
-  padding-top: 35px;
-}
-
-.food-text {
-  margin-top: 10px;
-}
-
-.how__container {
-  display: grid;
-  padding-top: 40px;
+h2 {
+  padding-bottom: 20px;
 }
 
 h2,
-h3,
-h4 {
+h3 {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 23px;
   color: var(--header-color);
-  padding-bottom: 20px;
 }
 
 .section__text {
   font-weight: 400;
   font-size: 1.125rem;
-  line-height: 23px;
+  line-height: 23.4px;
   color: var(--section__text-color);
   padding-top: 10px;
   padding-bottom: 20px;
@@ -180,10 +178,19 @@ h4 {
 
 .text-link:hover {
   border-bottom: 1px solid var(--link-hover-color);
+  outline: none;
 }
 
 .text-link:focus-visible {
   outline: 1px solid var(--link-focus-color);
+}
+
+.what-container .gadgets-text:last-of-type {
+  padding-bottom: 0;
+}
+
+.why-container p:last-of-type {
+  padding-bottom: 0;
 }
 
 .title-decor__not-bold {
@@ -192,43 +199,36 @@ h4 {
   line-height: 23px;
   color: #000028;
   background-color: var(--bg-color);
-  margin-top: 25px;
 }
 
 .section-how {
   margin-bottom: 20px;
 }
 
-.section-why {
-  margin-top: 5px;
-}
-
-.how-section {
-  padding-bottom: 0;
-}
-
 .images-container {
   display: grid;
   gap: 10px;
-  padding-top: 50px;
+  padding-top: 30px;
+  width: 100%;
 }
 
-  .images-section {
-    display: grid;
-    gap: 5px;
-  }
+.images-section {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+}
 
 .images {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .footer {
   height: 100vh;
   min-height: 668px;
   display: grid;
-  padding-top: 40px;
+  margin-top: 35px;
 }
 
 .footer-title {
@@ -237,8 +237,10 @@ h4 {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--footer-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  padding-top: 40px;
+  text-shadow: 2px 2px 0px var(--accent-color);
+  align-self: center;
+  justify-self: center;
+  padding-top: 30px;
 }
 
 @media (min-width: 768px) {
@@ -247,27 +249,21 @@ h4 {
     padding-right: 20px;
   }
 
-  .header {
-    display: grid;
-  }
-
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-left: -20px;
   }
 
-  .decorative-corner::before {
-    left: 717px;
+  .decorated-zone::before {
     top: 20px;
   }
 
   .decorative-text {
-    right: 50px;
     top: 20px;
   }
 
-  .decorative-corner::after {
-    top: 977px;
+  .decorated-zone::after {
+    bottom: 20px;
   }
 
   .header__theme-menu-list {
@@ -277,14 +273,25 @@ h4 {
   .in-header {
     max-width: 364px;
     justify-self: end;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
   }
 
-  .why__container {
-    display: grid;
+  .content-section {
+    padding-top: 80px;
+  }
+
+  .why-container {
     grid-template-columns: 1fr 2fr;
     padding-top: 60px;
     column-gap: 20px;
+  }
+
+  h2 {
+    max-width: 236px;
+  }
+
+  h2.footer-title {
+    max-width: 360px;
   }
 
   .why-section {
@@ -300,23 +307,8 @@ h4 {
     align-self: baseline;
   }
 
-  h3 {
-    max-width: 236px;
-  }
-
-  .how__container {
-    display: grid;
+  .how-container {
     grid-template-columns: 35% 65%;
-    padding-top: 60px;
-  }
-
-  .title-decor__not-bold {
-    grid-column: 2;
-    display: grid;
-  }
-
-  .how-section {
-    grid-column: 2;
   }
 
   .section-how {
@@ -325,15 +317,11 @@ h4 {
   }
 
   .images-container {
-    padding-top: 0;
-  }
-
-  .section-image {
-    margin-top: 80px;
+    padding-top: 60px;
+    gap: 20px;
   }
 
   .images-section {
-    display: grid;
     gap: 20px;
   }
 
@@ -350,7 +338,6 @@ h4 {
   .ice-cream-image {
     object-fit: cover;
     max-width: 100%;
-    height: 442px;
   }
 
   .tape {
@@ -360,7 +347,6 @@ h4 {
   }
 
   .tape-image {
-    height: 573px;
     object-fit: cover;
     max-width: 100%;
   }
@@ -379,34 +365,21 @@ h4 {
   .footer {
     height: 100vh;
     min-height: 1024px;
-    padding-top: 50px;
+    margin-top: 50px;
   }
 
   .footer-title {
-    justify-self: center;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-top: 35px;
   }
 }
 
 @media (min-width: 1024px) {
-  .header {
-    display: grid;
-  }
-
-  .decorative-corner::before {
-    left: 973px;
-  }
-
   .header__theme-menu-list {
     display: flex;
     justify-self: center;
     padding-top: 20px;
     gap: 23px;
-  }
-
-  .title-decor__not-bold {
-    margin-top: 23px;
   }
 
   .header__title {
@@ -420,32 +393,34 @@ h4 {
     margin-bottom: -40px;
   }
 
-  .decorative-corner::after {
-    top: 723px;
+  .decorated-zone::after {
+    bottom: 20px;
   }
 
-  .why__container {
+  .why-container {
     padding-top: 60px;
     column-gap: 10px;
+    grid-template-columns: 1fr 2fr;
   }
 
-  .section-why {
-    margin-top: 0;
-  }
-
-  .what__container {
-    display: grid;
+  .what-container {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
-    padding-top: 70px;
+    display: grid;
+    grid-auto-flow: row;
   }
 
-  .how__container {
-    padding-top: 65px;
+  .how-container {
+    gap: 10px;
+    grid-template-columns: 1fr 2fr;
   }
 
-  h3 {
+  h2 {
     max-width: 315px;
+  }
+
+  h2.footer-title {
+    max-width: 471px;
   }
 
   .concentration {
@@ -469,14 +444,6 @@ h4 {
     grid-row: 2;
   }
 
-  .tape-image {
-    min-height: 772px;
-  }
-
-  .ice-cream-image {
-    min-height: 600px;
-  }
-
   .footer {
     min-height: 768px;
     height: 100vh;
@@ -486,5 +453,4 @@ h4 {
   .footer-title {
     padding-top: 10px;
   }
-
 }

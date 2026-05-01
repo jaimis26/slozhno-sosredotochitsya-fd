@@ -19,6 +19,8 @@
   --link-hover-color: #353430;
   --link-focus-color: #353430;
   --border-focus-color: #353430;
+  --background-body-color: #FFF1F7;
+  --button-text-color: #353430;
 }
 
   /* сохраните этот селектор в приведённом виде.
@@ -47,5 +49,7 @@
   --link-hover-color: #353430;
   --link-focus-color: #353430;
   --border-focus-color: #353430;
+  --background-body-color: #FFF1F7;
+  --button-text-color: #353430;
 }
 }
