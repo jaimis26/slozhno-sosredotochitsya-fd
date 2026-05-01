@@ -96,9 +96,6 @@ body {
 .header__theme-menu-button_active {
   outline: 1px solid var(--button-active-color);
   pointer-events: none;
-  padding: 0px 13px;
-  width: 70px;
-  height: 26px;
 }
 
 .header__theme-menu-item:hover {
@@ -110,6 +107,9 @@ button {
   border: none;
   color: var(--button-text-color);
   text-transform: lowercase;
+  padding: 0px 13px;
+  width: 70px;
+  height: 26px;
 }
 
 button:focus-visible {
@@ -185,7 +185,7 @@ h3 {
   outline: 1px solid var(--link-focus-color);
 }
 
-.what-container .gadgets-text:last-of-type {
+.last-block .section__text {
   padding-bottom: 0;
 }
 
@@ -294,17 +294,8 @@ h3 {
     max-width: 360px;
   }
 
-  .why-section {
-    grid-column: 2;
-  }
-
   .what__container {
     padding-top: 60px;
-  }
-
-  .section-why {
-    grid-column: 2;
-    align-self: baseline;
   }
 
   .how-container {
@@ -363,7 +354,6 @@ h3 {
   }
 
   .footer {
-    height: 100vh;
     min-height: 1024px;
     margin-top: 50px;
   }
@@ -379,18 +369,21 @@ h3 {
     display: flex;
     justify-self: center;
     padding-top: 20px;
-    gap: 23px;
+  }
+
+  .header {
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   .header__title {
     align-self: center;
     font-size: (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   .in-header {
     max-width: 491px;
-    margin-bottom: -40px;
+    margin-top: 50px;
   }
 
   .decorated-zone::after {
@@ -423,30 +416,8 @@ h3 {
     max-width: 471px;
   }
 
-  .concentration {
-    align-self: baseline;
-    grid-column: 1;
-  }
-
-  .concentration-text {
-    grid-column: 1;
-  }
-
-  .food {
-    grid-column: 2;
-    align-self: baseline;
-    grid-row: 2;
-  }
-
-  .gadgets {
-    align-self: baseline;
-    grid-column: 3;
-    grid-row: 2;
-  }
-
   .footer {
     min-height: 768px;
-    height: 100vh;
     box-sizing: content-box;
   }
 
